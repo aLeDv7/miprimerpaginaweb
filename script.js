@@ -37,16 +37,16 @@
 
 //////////////////////////////////////////////////
 
-let nombre = "Julio";
-let ciudad = "San Jerónimo";
-let gusto = "tenis";
+// let nombre = "Julio";
+// let ciudad = "San Jerónimo";
+// let gusto = "tenis";
 
-let parrafo = document.querySelector(".parrafo1");
+// let parrafo = document.querySelector(".parrafo1");
 
-function cambiarTexto(nombre, ciudad, gusto) {
-    let contenido = `Hola, mi nombre es ${nombre}, nací en ${ciudad} y vivo en Lima. Me gusta el ${gusto}, correr y viajar. Me encantaría aprender a programar para poder ayudar las personas a mostrar lo que hacen`;
+// function cambiarTexto(nombre, ciudad, gusto) {
+//     let contenido = `Hola, mi nombre es ${nombre}, nací en ${ciudad} y vivo en Lima. Me gusta el ${gusto}, correr y viajar. Me encantaría aprender a programar para poder ayudar las personas a mostrar lo que hacen`;
     
-    return contenido;
-    }
+//     return contenido;
+//     }
 
-parrafo.innerText  = cambiarTexto(nombre, ciudad, gusto);
+// parrafo.innerText  = cambiarTexto(nombre, ciudad, gusto);
