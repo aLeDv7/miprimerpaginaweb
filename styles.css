@@ -8,11 +8,10 @@
 }
 
 
-
 /* HEADER*/
 
 header{
-    background-color: black;
+    background-color: rgb(44, 44, 44);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -32,6 +31,25 @@ header a i{
 header nav ul li a{
     color: white;
 }
+
+header nav ul li a:hover{
+    color: rgb(248, 248, 153) ;
+}
+
+#check{
+    display: none;
+}
+
+.checkbtn{
+    font-size: 25px;
+    color: rgb(248, 248, 153);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
 
 
 /* MAIN */
@@ -59,12 +77,17 @@ main .section-1 {
 main .section-1 img {
     width: 220px;
     height: 250px;
-    border-radius: 10px;
+    border-radius: 30px;
 }
 
 main .section-1 .acerca-de{
     text-align: right;
     padding: 4em;
+}
+
+main .section-1 .acerca-de h2{
+    color: rgb(131, 96, 8);
+    font-size: 25px;
 }
 
 main .section-2 {
@@ -79,25 +102,27 @@ main .section-2 img {
 
 /* TARJETAS */
 
-.card-container{
+.card-container{ 
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 100px;
+    /* margin-top: 20px; */
+    padding: 2em;
 }
 
 .card{
     width: 325px;
-    background-color: rgba(131, 115, 115, 0.322);
-    border-radius: 12px;
+    /* background-color: rgba(131, 115, 115, 0.322); */
+    /* border-radius: 12px; */
     overflow: hidden;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); */
     margin: 20px;
 }
 
 .card img{
     width: 100%;
     height: auto;
+    border-radius: 30px;
 }
 
 .card-content{
@@ -105,7 +130,7 @@ main .section-2 img {
 }
 
 .card-content h3{
-    font-size: 25px;
+    font-size: 25px;  
     margin-bottom: 10px;
     color: rgb(131, 96, 8);
 }
@@ -127,10 +152,13 @@ main .section-2 img {
 
 
 
+
+
+
 /* FOOTER */
 
 footer {
-    background-color: black;  
+    background-color: rgb(44, 44, 44);  
     padding: 1em;
     width: 100%;
     position: static;
@@ -150,3 +178,92 @@ footer nav{
 }
 
  
+/* MEDIA QERY - ADAPTAR DISEÑO */
+
+/* Estilos para pantallas más pequeñas (hasta 768px) */
+
+/* min 768px  moviles*/
+
+@media (max-width: 768px) {
+    main .section-1 {
+      width: 100%;    
+      flex-direction: column;
+    }
+    main .section-1 .acerca-de {
+      text-align: center;
+    }
+   
+    .checkbtn{
+        display: block;
+    }
+    header nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: rgb(87, 87, 47);
+        text-align: center;
+
+        top: 110px;
+        left: 100%;
+        transition: all 0.5s;
+
+      /* flex-direction: column;
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      left: 100%;
+      transition: all 0.5s;
+      background-color: #2492ff;
+      color: white;
+      margin: 0;
+      text-align: center;
+      list-style: none; */
+    }
+  
+    #check:checked ~ ul {
+      /* flex-direction: column; */
+      left: 0;
+      display: block;
+    }
+  
+    header nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    header nav ul li{
+        font-size: 22px;
+    }
+
+    #check:checked ~ .checkbtn{
+        color: white;
+    }
+
+    /* .button-menu {
+      display: block;
+    } */
+
+    /* .favorite-icon {
+      display: none;
+    } */
+
+    /* .header h1 {
+      display: block;
+    } */
+
+    /* .header {
+      background-color: #dbb686;
+    } */
+
+    /* .menu {
+      display: block;
+    }  */
+  }
+
+  /* @media (max-width: 768px){
+    header{
+        background-color: rgb(116, 111, 48);
+    }
+  } */
+  
