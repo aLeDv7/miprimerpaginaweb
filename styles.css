@@ -30,6 +30,10 @@ header a i{
     font-size: 2em;
 }
 
+header a i:hover{
+    color: white;
+}
+
 header nav ul li a{
     color: white;
 }
